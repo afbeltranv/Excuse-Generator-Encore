@@ -12,10 +12,15 @@ let when = [
   "while I was praying"
 ];
 let excuse =
-  who[Math.floor(Math.random() * who.length)] +
+  randLista(who) +
   " " +
-  action[Math.floor(Math.random() * action.length)] +
+  randLista(action) +
   " " +
-  what[Math.floor(Math.random() * what.length)] +
+  randLista(what) +
   " " +
-  when[Math.floor(Math.random() * when.length)];
+  randLista(when);
+
+  function randLista (listas){
+    return listas[Math.floor(Math.random() * listas.length)];
+  }
+  
